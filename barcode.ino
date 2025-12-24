@@ -142,7 +142,7 @@ void loop() {
     Serial.print("Publishing JSON: ");               // [ADDED]
     Serial.println(payload);                         // [ADDED]
 
-    // ✅ MQTT publish (이 3줄이 "mqtt에 띄우는" 동작)
+    // MQTT publish (이 3줄이 "mqtt에 띄우는" 동작)
     mqttClient.beginMessage(topic);
     mqttClient.print(payload);                       // [CHANGED] barcode+"test" -> JSON payload
     mqttClient.endMessage();
